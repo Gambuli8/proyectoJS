@@ -1,4 +1,4 @@
-
+/*
 let nombre_usuario = prompt("ingresar nombre");
 alert("el nombre ingresado es " + nombre_usuario);
 
@@ -21,12 +21,21 @@ for (let i = 16; i <= 18; i++) {
         continue;
     } 
 }
-
+function pedirdni() {
 let DNI_usuario = prompt("ingresar DNI");
 alert("el DNI ingresado es " + DNI_usuario);
+}
+    pedirdni();
 
+function pedirfecha() {
 let nacimiento_usuario = prompt("ingresar fecha de nacimiento");
 alert("la fecha de nacimiento ingresada es " + nacimiento_usuario);
+}
+    pedirfecha();
 
-let EMAIL_usuario = prompt("ingresar email");
-alert("el email ingresado es " + EMAIL_usuario);
+function pedirMail() {
+    let EMAIL_usuario = prompt("ingresar email");
+    alert("el email ingresado es " + EMAIL_usuario);
+}
+    pedirMail();
+*/
