@@ -39,7 +39,7 @@
 
     <div class="container mt-3 form">
         <form>
-            <select required class="form-control" placeholder="Selecciona Banco" value=""required>
+            <select required id="bancoo" class="form-control" placeholder="Seleccionar Banco">
                 <option> Santander </option>
                 <option> Galicia </option>
                 <option> BBVA </option>
@@ -49,16 +49,24 @@
                 <option> ICBC </option>
             </select>
             <br>
-            <input type="number" class=" montoo form-control" placeholder="Ingrese Monto" value=""required>
+            <input type="number" id="montoo" class=" form-control" placeholder="Ingrese Monto" >
             <br>
-            <input type="number" class=" cuotass form-control" placeholder="Coutas" value=""required>
+            <select required id="cuotass" class=" form-control" placeholder="Seleccionar cuotas" >
+                <option> 3 </option>
+                <option> 6 </option>
+                <option> 9 </option>
+                <option> 12 </option>
+                <option> 24</option>
+                <option> 32 </option>
+                <option> 46 </option>
+            </select>
             <br>
-            <input type="text" class=" interess form-control" placeholder="Intereses" value=""required>
+            <input type="text" id="interess" class=" form-control" placeholder="Intereses">
         </form>
     </div>
 
     <div class="d-grid gap-3 boton">
-        <a href="#"><button onclick="pedirprestamo()" type="button" class="btn btn-primary btn-block">Pedir Prestamo</button></a>
+        <a href="#"><button onclick="pedirprestamo()" type="button" class="btn btn-primary btn-block">Calcular prestamo</button></a>
     </div>
 
     <br>
