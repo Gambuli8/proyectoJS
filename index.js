@@ -45,16 +45,34 @@ for (let i = 19; i <= 18; i++) {
 
     let usuario = {"nombree": nombre.value , "apellidoo": apellido.value , "edadd": edadd.value , "dnii": dni.value , "fechaa": fecha.value , "emaill": email.value , "tell": tel.value};
 
-    arreglo_usuarios.push(usuario);
+    //arreglo_usuarios.push(usuario);
     
-    localStorage.setItem("usuario" , arreglo_usuarios);
+    //localStorage.setItem("usuario" , arreglo_usuarios);
 
-
+    let usuario_json = JSON.stringify(usuario);
+    console.log(usuario_json);
 }
 
-let boton = document.getElementById("boton");
+//let boton = document.getElementById("boton");
+let btnEnviar = document.getElementById("enviar");
+    /* boton validar datos */
 
-boton.addEventListener("click" , iralprestamo);
+    /* Simulación al hacer click al btn validar datos, si esta bien mosrtar el boton para ir al prestamo */
+btnEnviar.addEventListener("click", () => {
+    let email = document.getElementById("emaill");
+    /* acá van todos los getelementByID de los inputs para validar los campos */
+
+
+
+    /* condicional para validar todos los datos */
+    if (email.value == "" ) {// Si el input de mail esta vacio no se muestra el boton
+    boton.style.display = "none";
+    } else {//si esta relleno que muestre el boton de ir al prestamo
+    boton.style.display = "block";
+}
+});
+
+btnEnviar.addEventListener("click" , iralprestamo);
 
 function pedirprestamo(){
 
