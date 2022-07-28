@@ -1,18 +1,3 @@
-/*
-let usuario_uno = new usuario ("pepe" , "lopez" , 30 , "38.999.764");
-let usuario_dos = new usuario ("lucas" , "rodriguez" , "32" , "38.432.875" , "26/04/1990" , "lucasrodriguez@gmail.com" , "355-327489");
-
-
-
-console.log("el nombre del usuario 1 es:" , usuario_uno.nombre);
-console.log("el apellido del usuario 1 es:" , usuario_uno.apellido);
-console.log("la edad del usuario 1 es:" , usuario_uno.edad);
-
-console.log("el dni del usuario 2 es:" , usuario_dos.dni);
-console.log("el telefono del usuario 2 es:" , usuario_dos.telefono);
-console.log("la email del usuario 2 es:" , usuario_dos.email);
-*/
-
 function calcularporcentaje(numero, porcentaje){
     return numero / 100 * porcentaje;
 
@@ -25,16 +10,13 @@ let interes = document.getElementsByClassName("intereses");
 
 console.log(calcularporcentaje);
 
+let arreglo_usuarios = []
+
 function iralprestamo(){ 
 
     let nombre = document.getElementById ("nombree");
 
-    console.log( nombre);
-    console.log("bienvenido al sistema: " , nombre.value );
-
     let apellido = document.getElementById ("apellidoo");
-
-console.log( apellido );
 
 for (let i = 19; i <= 18; i++) {
 
@@ -52,25 +34,31 @@ for (let i = 19; i <= 18; i++) {
         continue;
     } 
 }
-console.log( edadd );
 
-let dni = document.getElementById ("dnii");
-console.log( dni );
+    let dni = document.getElementById ("dnii");
+
+    let fecha = document.getElementById ("fechaa");
+
+    let email = document.getElementById ("emaill");
+
+    let tel = document.getElementById ("tell");
+
+    let usuario = {"nombree": nombre.value , "apellidoo": apellido.value , "edadd": edadd.value , "dnii": dni.value , "fechaa": fecha.value , "emaill": email.value , "tell": tel.value};
+
+    arreglo_usuarios.push(usuario);
+    
+    localStorage.setItem("usuario" , arreglo_usuarios);
 
 
-let fecha = document.getElementById ("fechaa");
-console.log( fecha );
-
-let email = document.getElementById ("emaill");
-console.log( email );
-
-let tel = document.getElementById ("tell");
-console.log( tel );
 }
+
+let boton = document.getElementById("boton");
+
+boton.addEventListener("click" , iralprestamo);
 
 function pedirprestamo(){
 
-    let banco = document.getElementById("bancoo").checked;
+    let banco = document.getElementById("bancoo");
 
     console.log(banco);
     console.log(banco.checked);
@@ -80,7 +68,7 @@ function pedirprestamo(){
     console.log(monto);
     console.log(monto.value);
 
-    let cuota = document.getElementById("cuotass").checked;
+    let cuota = document.getElementById("cuotass");
 
     console.log(cuota);
     console.log(cuota.checked);
@@ -90,4 +78,7 @@ function pedirprestamo(){
     console.log(interes);
     console.log(interes.value);
 }
+
+//typeof para buscar un dato en especifico
+//length para saber cuantos objetos hay
 
