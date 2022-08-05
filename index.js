@@ -12,7 +12,7 @@ console.log(calcularporcentaje);
 
 let arreglo_usuarios = []
 
-function iralprestamo(){ 
+function validardatos(){ 
 
     let nombre = document.getElementById ("nombree");
 
@@ -72,8 +72,15 @@ btnEnviar.addEventListener("click", () => {
 }
 });
 
-btnEnviar.addEventListener("click" , iralprestamo);
+btnEnviar.addEventListener("click" , validardatos);
 
+Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Completado Correctamente',
+    showConfirmButton: false,
+    timer: 1500
+})
 function pedirprestamo(){
 
     let banco = document.getElementById("bancoo");
@@ -99,4 +106,5 @@ function pedirprestamo(){
 
 //typeof para buscar un dato en especifico
 //length para saber cuantos objetos hay
+
 

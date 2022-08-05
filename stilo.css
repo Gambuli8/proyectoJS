@@ -74,6 +74,7 @@ h2{
 
 #enviar{
     margin: 40px;
+    width: 200px;
     background-color: deepskyblue;
     font-family: monospace;
     font-size: 17px;
