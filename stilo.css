@@ -97,3 +97,23 @@ h2{
     align-items: center;
     display: block;
 }
+
+#ivaa{
+    width: 30%;
+    margin: 10px;
+    margin-left: 80px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#total{
+    text-align: center;
+    margin: 5px;
+    margin-left: 80px;
+    padding: 5px;
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+}

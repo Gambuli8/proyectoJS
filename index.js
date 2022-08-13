@@ -131,10 +131,6 @@ function pedirprestamo() {
   //console.log(cuota);
   //console.log(cuota.checked);
 
-  let interes = document.getElementById("interess");
-
-  //console.log(interes);
-  //console.log(interes.value);
 
   function calcular_iva(precio){
 
