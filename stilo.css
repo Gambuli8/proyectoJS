@@ -117,3 +117,9 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     text-transform: capitalize;
 }
+
+#divIva{
+    margin: 30px;
+    font-size: 40px;
+    border-bottom: 1px solid black;
+}

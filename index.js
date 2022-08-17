@@ -132,21 +132,24 @@ function pedirprestamo() {
   //console.log(cuota.checked);
 
 
-  function calcular_iva(precio){
-
+/* funcion IVA */
+  function calcular_iva(precio) {
     let iva = precio * 0.21;
-    return iva
-  
+    let precioIva = parseFloat(precio) + parseFloat(iva);
+    return precioIva;
   }
-  
+  /* DOM DIV */
   let precio = document.getElementById("montoo");
+  /* USAR FUNCION */
+  let precioConIVA = calcular_iva(precio.value);
+  // console.log(precioConIVA);
   
-  let precio_mas_iva = precio + calcular_iva(precio)
-  document.getElementById("ivaa: ", precio_mas_iva);
-
+  /* ENVIAR AL HTML */
+  const divIVA = document.getElementById("divIva");
+  const div = document.createElement("h4");
+  div.innerText = `$ ${precioConIVA}`;
+  divIVA.appendChild(div);
 }
-
-calcular_iva("ivaa");
 
 //typeof para buscar un dato en especifico
 //length para saber cuantos objetos hay
@@ -162,17 +165,4 @@ console.log(calcularporcentaje (100000, 25));
 
 //console.log("el 30% de 300.000 es:", calcularporcentaje(300000, 30)); //30%
 //console.log("el 20% de 150.000 es:", calcularporcentaje(150000, 20)); //20% */
-/*
-function calcular_iva(precio){
-
-  let iva = precio * 0.21;
-  return iva
-
-}
-
-let precio = document.getElementById("montoo");
-
-let precio_mas_iva = precio + calcular_iva(precio)
-console.log("el precio mas iva es: ", precio_mas_iva)
-*/
 
